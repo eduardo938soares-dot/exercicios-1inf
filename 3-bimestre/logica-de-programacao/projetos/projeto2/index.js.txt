@@ -1,0 +1,48 @@
+console.log
+const cliente='Lucas Almeida'
+const produto='Notebook Gamer'
+const preco= 4500
+const quantidade= 2
+const estoque= 10
+const desconto= 10
+const valorPago= 9000
+const subtotal=preco*quantidade
+const estoqueDisponivel=estoque-quantidade
+const descontoPercentual=subtotal*desconto / 100
+const valorDesconto=subtotal-descontoPercentual
+const troco=valorPago-valorDesconto
+const valorFinal = valorPago - valorDesconto
+ 
+let statusPedido = "aguardando"
+let pagamentoStatus = "aguardando"
+
+if (estoque >= quantidade){
+    statusPedido = "Pedido disponível para finalização"
+} else {
+    statusPedido = "Pedido não pode ser finalizado por falta de estoque"
+}
+ if (valorpago >= valorFinal) {
+    pagamentoStatus = "Pagamento aprovado"
+ } else {
+    pagamentoStatus = "Pagamento insuficiente"
+ }
+const resumo=`
+=== RESUMO DO PEDIDO ===
+
+cliente:${cliente}
+    preco:R$ ${preco}
+    quantidade:R$ ${quantidade}
+    estoque:R$ ${estoque}
+    valorpago:R$ ${valorPago}
+    subtotal:R$ ${subtotal}
+    estoqueDisponivel:${estoqueDisponivel}
+    descontoPercentual:${descontoPercentual}%
+    valorDesconto:${valorDesconto}
+    valorFinal:${valorFinal}
+    pagamentoStatus:${pagamentoStatus}
+    troco:${troco}
+    statusPedido:${statusPedido}
+    resumo
+
+`
+console.log(resumo)
