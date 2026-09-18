@@ -1,4 +1,4 @@
-console.log
+
 const nome="Eduardo Soares"
 const idade=14
 const categoria="comum"
@@ -39,6 +39,27 @@ let pagamentoStatus = "Pagamento pendente"
 if (acessoStatus === "Acesso à piscina negado" || pagamentoStatus === "pagamento aprovado") {
   statusAcesso = "Entrada no clube não confirmada"
 }
+
+const resumo = `
+  
+    nome: ${nome}
+    idade: ${idade}
+    categoria: ${categoria}
+    possuiCarteirinha: ${possuiCarteirinha}
+    inadimplente: ${inadimplente}
+    valorMensalidade: R${valorMensalidade}
+    valorPago: R${valorPago}
+    idadeStatus: ${idadeStatus}
+    nivelAcesso: ${nivelAcesso}
+    acessoStatus: ${acessoStatus}
+    pagamentoStatus: R${pagamentoStatus}
+    troco: R${troco}
+    statusAcesso: ${statusAcesso}
+    resumo: ${resumo}
+
+
+  `
+  console.log(resumo)
   
 module.exports = {
     nome,
