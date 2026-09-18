@@ -1,4 +1,4 @@
-console.log
+
 const cliente= "Renata Dias"
 const produto= "Garrafão de Água mineral 20L"
 const preco= 4
@@ -33,40 +33,31 @@ const troco= valorPago-valorFinal
     const pagamentoAprovado = valorPago >= valorFinal
     if (capacidadeAdequada && pagamentoAprovado) {
       console.log("situação: Pedido confirmado e pronto para envio.")
-    } else if (!pagamentoAorovado) {
+    } else (pagamentoAorovado) {
       console.log("Situação: Pedido pendente (Aguardando pagamento")
-    } else if (!capacidadeAdequada) {
+    } else (capacidadeAdequada) {
       console.log("Situação: Retido (Logistica bloqueada por excesso de carga")
     }
 
     const resumo =`
     cliente: ${cliente}
     produto: ${produto}
-    preco: ${preco}
+    preco: R${preco}
     quantidade: ${quantidade}
     capacidadeCaminhao: ${capacidadeCaminhao}
-    valorPago: ${valorPago}
-    subtotal: ${subtotal}
+    valorPago: R${valorPago}
+    subtotal: R${subtotal}
     capacidadeStatus: ${capacidadeStatus}
     descontoStatus: ${descontoStatus}
-    valorDesconto: ${valorDesconto}
-    valorFinal: `
-
-    $fbmam
-    pagamentoStatus,
-    troco,
-    statusPedido,
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    valorDesconto: R${valorDesconto}
+    valorFinal: R${valorFinal}
+    pagamentoStatus: ${pagamentoStatus}
+    troco: R${troco}
+    statusPedido: ${statusPedido}
+    resumo: ${resumo}
+    final do resumo
     `
+console.log (resumo)
 
 module.exports = {
     cliente,
@@ -84,4 +75,4 @@ module.exports = {
     troco,
     statusPedido,
     resumo,
-    }
+  }
