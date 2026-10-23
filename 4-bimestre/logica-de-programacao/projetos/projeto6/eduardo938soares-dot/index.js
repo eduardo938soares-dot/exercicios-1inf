@@ -1,4 +1,4 @@
-const prompt= require('prompt-sync')()
+const prompt = require('prompt-sync')()
 
 const quantidadeDeDias = Number(prompt("Quantidade de dias: "))
 const metaDiaria = Number(prompt("Meta diária: "))
@@ -9,22 +9,26 @@ let diasAcimaDaMeta = 0
 let melhorDia = 0
 
 for (let dia = 1; dia <= quantidadeDeDias; dia++) {
-    const venda = Number(prompt(`Venda do dia ${dia}: `))
-   totalVendido >= venda
+  const venda = Number(prompt(`Venda do dia ${dia}: `))
+
+  totalVendido += venda
+
   if (venda >= metaDiaria) {
-  diasAcimaDaMeta++
- }
+    diasAcimaDaMeta++
+  }
 
   if (venda > melhorDia) {
- melhorDia = venda
- }
- } 
- const mediaVendas = totalVendido / quantidadeDeDias
-const situacaoSemana = totalVendido >= metaSemanal
- ? "Meta semanal atingida"     : "Meta semanal não atingida"       
+    melhorDia = venda
+  }
+}
 
-  const resumo = `
-  quantidadeDeDias: ${quantidadeDeDias}
+const mediaVendas = totalVendido / quantidadeDeDias
+const situacaoSemana = totalVendido >= metaSemanal
+  ? "Meta semanal atingida"
+  : "Meta semanal não atingida"
+
+const resumo = `
+quantidadeDeDias: ${quantidadeDeDias}
 metaDiaria: ${metaDiaria}
 metaSemanal: ${metaSemanal}
 totalVendido: ${totalVendido}
@@ -34,16 +38,17 @@ melhorDia: ${melhorDia}
 situacaoSemana: ${situacaoSemana}
 `
 
- console.log(resumo)
+console.log(resumo)
 
 module.exports = {
-quantidadeDeDias,
-metaDiaria,
-metaSemanal,
-totalVendido,
-mediaVendas,
-diasAcimaDaMeta,
-melhorDia,
-situacaoSemana,
- resumo
-  }
+  quantidadeDeDias,
+  metaDiaria,
+  metaSemanal,
+  totalVendido,
+  mediaVendas,
+  diasAcimaDaMeta,
+  melhorDia,
+  situacaoSemana,
+  resumo
+}
+
